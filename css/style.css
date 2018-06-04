@@ -1,0 +1,33 @@
+@charset "utf-8";
+.body{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+	alignment-adjust:central;
+}
+
+.div{
+	background-color: #FFF;
+	outline: outset;
+	height: 634px;
+	position: absolute;
+	width: 862px;
+}
+
+#title{color:#03F;
+alignment-adjust:central;
+}
+
+.button{color:#036;
+font:Verdana, Geneva, sans-serif;
+	font-size:15px;}
+
+.button:hover{
+	background-color:#069;
+	font:Verdana, Geneva, sans-serif;
+	font-size:17px;
+	}
+
+#Image1{
+	alignment-adjust:central;
+	text-align:center;
+	}
