@@ -32,17 +32,29 @@
 
 <section id="Seccion1">
 <article>
-  <h2>Objetivo General</h2>
-  <p>Mostrar la programación y los elementos necesarios para vincular una base de datos MySql con PHP.
-  <p>
-  <h1>Objetivo específico 1:</h1>
-  <p>Dar a conocer las funciones necesarias para hacer la conexión con la base de datos y las consultas.
-  <p>
-  <h1>Objetivo específico 2:</h1>
-  <p>Mostrar los resultados de las consultas, forma de hacer inserción y eliminación de registros.
+<img src="images/tema1.jpg">
+  <h2>Conexión con una base de datos</h2>
+  <p>Para realizar la conexión con la base de datos debemos tener en cuenta lo siguiente:
+<p>
+<li>Conocer el nombre de la base de datos.</li>
+<li>Tener credenciales de acceso a esta.</li>
+<li>Saber el nombre del servidor donde está alojada la base.</li>
+<p>
+
+Teniendo claro esto se procede a realizar el código que nos permitirá enlazar a php con mysql.
+
+La función principal que sirve a este propósito es mysql_connect, cuya sintaxis es la siguiente:
+<p>
+mysql_connect(string $server, string $username, string $password)
+<p>
+Donde server es una cadena que indica el nombre del servidor donde se encuentra la base de datos, username es el usuario con el que nos conectaremos al servidor, password la contraseña de acceso.
+
+Una vez conectados al servidor debemos indicar a cuál base de datos deseamos acceder mediante la función mysql_select_db:
+<p>
+mysql_select_db($databasename,$conexion)
+
 </article>
 </section>
-
 
 
 </div>

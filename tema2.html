@@ -1,0 +1,80 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Pagina OVI</title>
+
+<link href="css/estilos.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+<header>
+<img src="images/logo.png" width="175" height="106" id="logo"><h4>Tutorial conexión bases de datos con php y mysql</h4>
+</header>
+
+<div class="sliders" >
+
+</div>
+<nav>
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="objetivos.html">Objetivos</a></li>
+        <li><a href="#">Temas</a>
+            <ul>
+                <li><a href="tema1.html">Tema 1</a></li>
+                <li><a href="tema2.html">Tema 2</a></li>
+            </ul>
+        </li>
+        <li><a href="autores.html">Autores</a></li>
+    </ul>
+</nav>
+<div id="principal">
+
+<section id="Seccion1">
+<article>
+<img src="images/tema2.png">
+  <h2>Consultas a una base de datos</h2>
+  <p>Ya que hemos accedido al servidor y y conectado con nuestra base de datos podemos recuperar datos para luego mostrarlos al usuario final.
+<p>
+Para realizar esto necesitamos hacer la consulta como la entiende mysql, por ejemplo “SELECT CAMPO1,CAMPO2,.. FROM TABLA”, y luego mediante la función mysql_query enviar la sunsulta al servidor de bases de datos.
+<p>
+mysql_query($consulta,$conexion)
+<p>
+Para mostrar los resultados usamos mysql_fetch_array, como su nombre lo indica devuelve un array donde cada campo recuperado es un ítem de este y podemos acceder a él por su nombre:
+<p>
+$fila = Mysql_fetch_array($consulta) <span>// Se asocia el array a la variable</span>
+<p>
+Con un while le indicamos a php que muestre los resultados mientras se cumpla con todos los registros de la consulta.
+<p>
+While ($fila = Mysql_fetch_array($consulta){
+         echo “Encabezado”.$fila[“Campo1”].$fila[“Campo2”]
+}
+<p>
+<h1>Inserción</h1>
+<p>
+Así como en la consulta primero hay que indicar cuales son los datos que se desean ingresar, y posteriormente ejecutar la función mysql_query.
+<p>
+$insertar= “INSERT INTO TABLA (Campo1) VALUES (‘DATO’)”<br>
+mysql_query($insertar,$conexion)
+<p>
+<h1>Eliminación</h1>
+<p>
+De igual manera que las anteriores solo se indica la indtruccion de lo que se desea elimianar con la misma función mysql_query
+<p>
+$elimina= “DELETE FROM TABLA WHERE Campo = ‘Condicion’” 
+<br>
+mysql_query($elimina,$conexion)
+
+</article>
+</section>
+
+
+
+</div>
+
+ <footer id="footer2">
+ <a href="https://twitter.com/UniversidadUNAD" target="_blank"><img src="images/twiter.png" id="tw" alt="twiter"></a>
+ </footer>
+
+</body>
+</html>
